@@ -160,7 +160,7 @@ bookshop/
 ## Email Setup (Optional)
 
 For email notifications (order confirmation, contact form):
-- Check `EMAIL_SETUP_GUIDE.md` for detailed instructions
+
 - Requires Gmail account with App Password
 - Test using `test_email.php`
 
