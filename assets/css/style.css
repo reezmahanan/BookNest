@@ -1,0 +1,878 @@
+/* 🎨 UNIQUE MODERN BOOKSTORE THEME - Purple & Teal Harmony */
+:root {
+  /* Primary Colors - Deep Purple & Vibrant Teal */
+  --primary: #6B46C1;        /* Rich Purple */
+  --primary-dark: #553399;    /* Deep Purple */
+  --primary-light: #8B5CF6;   /* Light Purple */
+  --secondary: #14B8A6;       /* Teal */
+  --accent: #F59E0B;          /* Amber Accent */
+  --success: #10B981;         /* Emerald */
+  --danger: #EF4444;          /* Red */
+  
+  /* Neutral Colors */
+  --dark: #1F2937;
+  --light: #F9FAFB;
+  --muted: #6B7280;
+  --card-bg: #FFFFFF;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%);
+  --gradient-secondary: linear-gradient(135deg, #14B8A6 0%, #06B6D4 100%);
+  --gradient-hero: linear-gradient(135deg, #6B46C1 0%, #14B8A6 100%);
+  --gradient-card: linear-gradient(135deg, rgba(107,70,193,0.05) 0%, rgba(20,184,166,0.05) 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(107, 70, 193, 0.08);
+  --shadow-md: 0 4px 20px rgba(107, 70, 193, 0.12);
+  --shadow-lg: 0 10px 40px rgba(107, 70, 193, 0.15);
+  --shadow-xl: 0 20px 60px rgba(107, 70, 193, 0.2);
+}
+
+/* 🌐 Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
+  color: var(--dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🎯 Enhanced Navigation with Gradient */
+.navbar {
+  background: var(--gradient-primary) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  padding: 1rem 0 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.75rem;
+  color: white !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.navbar-brand span {
+  color: #FBBF24;
+  font-weight: 900;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: rgba(255,255,255,0.9) !important;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: white !important;
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background: rgba(255,255,255,0.2);
+  color: white !important;
+}
+
+.navbar .dropdown-menu {
+  border: none;
+  box-shadow: var(--shadow-lg);
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+
+.navbar .dropdown-item {
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar .dropdown-item:hover {
+  background: var(--gradient-card);
+  color: var(--primary);
+  padding-left: 2rem;
+}
+
+/* 🎨 Beautiful Buttons */
+.btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-secondary {
+  background: var(--gradient-secondary);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  border-radius: 12px;
+  padding: 12px 30px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--gradient-primary);
+  border-color: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 🦸 Hero Section - Stunning Gradient */
+.hero-section {
+  background: var(--gradient-hero);
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  animation: pulse 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -1px;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 📚 Book Cards - Premium Design */
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  height: 100%;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.card-img-top {
+  height: 320px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  filter: brightness(0.95);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.08);
+  filter: brightness(1);
+}
+
+.card-body {
+  padding: 1.75rem;
+  background: linear-gradient(to bottom, white 0%, var(--gradient-card) 100%);
+}
+
+.card-title {
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bg-primary {
+  background: var(--gradient-primary) !important;
+}
+
+.bg-success {
+  background: var(--success) !important;
+}
+
+.bg-warning {
+  background: var(--accent) !important;
+  color: var(--dark) !important;
+}
+
+/* ⭐ Rating Stars */
+.rating-stars {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.rating-stars .filled {
+  color: var(--accent);
+  filter: drop-shadow(0 1px 2px rgba(245, 158, 11, 0.3));
+}
+
+.rating-stars .empty {
+  color: #E5E7EB;
+}
+
+/* 🎯 Features Section - Modern Cards */
+.feature-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  background: white;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-card);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-xl);
+}
+
+.feature-card h3,
+.feature-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card h3 {
+  color: var(--dark);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.feature-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section {
+    padding: 80px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.35rem;
+  }
+  
+  .feature-card {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ⚡ Loading Animation - Colorful */
+.loading {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #E5E7EB;
+  border-top: 3px solid var(--primary);
+  border-right: 3px solid var(--secondary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 🎉 Success/Error Messages - Beautiful Alerts */
+.alert {
+  border-radius: 15px;
+  padding: 1.25rem 1.5rem;
+  border: none;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1.5rem;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+  color: #065F46;
+  border-left: 5px solid var(--success);
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+  color: #991B1B;
+  border-left: 5px solid var(--danger);
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  color: #92400E;
+  border-left: 5px solid var(--accent);
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+  color: #1E40AF;
+  border-left: 5px solid var(--secondary);
+}
+
+/* 📝 Custom Form Styling - Modern & Clean */
+.form-control, .form-select {
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  background: white;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(107, 70, 193, 0.1);
+  outline: none;
+}
+
+.form-label {
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* 🛒 Cart Badge - Eye-catching */
+.cart-badge {
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  position: relative;
+  margin-left: 0.25rem;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* 📊 Table Styling - Professional */
+.table {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.table thead {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.table thead th {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1.25rem;
+  border: none;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background: var(--gradient-card);
+  transform: scale(1.01);
+}
+
+.table td {
+  padding: 1.25rem;
+  vertical-align: middle;
+  border-color: #F3F4F6;
+}
+
+/* 🎨 List Group - Modern */
+.list-group-item {
+  border: none;
+  border-radius: 15px !important;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.list-group-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(5px);
+}
+
+/* 💫 Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* 🎭 Page Transitions */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 Utility Classes */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient {
+  background: var(--gradient-primary);
+}
+
+.shadow-custom {
+  box-shadow: var(--shadow-xl);
+}
+
+.rounded-custom {
+  border-radius: 20px;
+}
+
+/*  MODERN FOOTER DESIGN - Purple & Teal Gradient */
+.footer-modern {
+  position: relative;
+  margin-top: 0 !important;
+}
+
+.footer-main {
+  background: var(--gradient-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(20,184,166,0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer-brand h3 {
+  font-size: 2rem;
+  position: relative;
+}
+
+.text-gradient-footer {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.text-light-muted {
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: 500;
+  position: relative;
+  padding-left: 0;
+}
+
+.footer-links a::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: var(--accent);
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 25px;
+  transform: translateX(5px);
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+.social-icon:hover {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-color: var(--accent);
+}
+
+.footer-bottom {
+  background: var(--primary-dark);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-legal a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-legal a:hover {
+  color: var(--accent);
+}
+
+.footer-legal .list-inline-item {
+  color: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 768px) {
+  .footer-title {
+    margin-top: 1.5rem;
+  }
+  .footer-links a:hover {
+    padding-left: 0;
+  }
+}
+
+
+/* Join Now Button - Outline Light Style */
+.btn-outline-light {
+  border: 2px solid white !important;
+  color: white !important;
+  background: transparent;
+  border-radius: 12px;
+  padding: 12px 30px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline-light:hover {
+  background: white !important;
+  color: var(--primary) !important;
+  border-color: white !important;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-outline-light i {
+  color: inherit;
+}
+
+
+/* Fix Hero Section Button Clicks */
+.hero-section .container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-section .btn {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.hero-section .d-flex {
+  position: relative;
+  z-index: 10;
+}
+
+/* 💰 Discount Badge Styling */
+.badge.bg-danger {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%) !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  font-weight: 800;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* 💖 Wishlist Button Styling */
+.btn-outline-danger {
+  border-color: var(--danger);
+  color: var(--danger);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background: var(--danger) !important;
+  border-color: var(--danger) !important;
+  color: white !important;
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background: #DC2626 !important;
+  border-color: #DC2626 !important;
+  transform: scale(1.05);
+}
+
+/* Wishlist heart animation */
+.btn-outline-danger i.bi-heart,
+.btn-danger i.bi-heart-fill {
+  transition: transform 0.3s ease;
+}
+
+.btn-outline-danger:hover i.bi-heart,
+.btn-danger:hover i.bi-heart-fill {
+  transform: scale(1.2);
+}
+
+/* 💸 Strikethrough Price Styling */
+.text-decoration-line-through {
+  opacity: 0.6;
+  font-size: 0.9em;
+}
+
+/* 📦 Wishlist Empty State */
+.bi.display-1 {
+  font-size: 5rem;
+  opacity: 0.3;
+}
+
