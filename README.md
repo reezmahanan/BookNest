@@ -1,4 +1,4 @@
-# BookNest - Online Bookstore
+ # BookNest - Online Bookstore
 
 A complete online bookstore website built with PHP and MySQL.
 
@@ -209,13 +209,13 @@ This project covers:
 - Framework: Bootstrap 5
 - Fonts: Google Fonts
 
-## For Students
+## Team Members
 
-Feel free to:
-- Study the code to learn
-- Modify and experiment
-- Add new features
-- Use for school projects (with proper attribution)
+This project was developed by:
+- M. Reezma Hanan
+- AJ. Raaef
+- NM. Mahuroos
+- NM. Asrar
 
 ## Need Help?
 
@@ -229,6 +229,7 @@ If something doesn't work:
 ---
 
 **Project:** BookNest - Online Bookstore  
+**Type:** Team Project  
 **Purpose:** Educational/Learning  
 **Year:** 2025  
 **Version:** 1.0

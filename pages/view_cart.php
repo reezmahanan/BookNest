@@ -148,9 +148,16 @@ $total = 0;
                 <?php while ($row = $result->fetch_assoc()): 
                     $subtotal = $row['price'] * $row['quantity'];
                     $total += $subtotal;
+                    
+                    // Check if image_url is a full URL or local path
+                    if (filter_var($row['image_url'], FILTER_VALIDATE_URL)) {
+                        $imgSrc = $row['image_url'];
+                    } else {
+                        $imgSrc = "../assets/images/" . htmlspecialchars($row['image_url']);
+                    }
                 ?>
                     <tr>
-                        <td><img src="../assets/images/<?php echo htmlspecialchars($row['image_url']); ?>" alt="Book" class="img-fluid"></td>
+                        <td><img src="<?php echo $imgSrc; ?>" alt="Book" class="img-fluid" onerror="this.src='../assets/images/no-image.jpg'"></td>
                         <td><?php echo htmlspecialchars($row['title']); ?></td>
                         <td><?php echo htmlspecialchars($row['author']); ?></td>
                         <td>$<?php echo number_format($row['price'], 2); ?></td>

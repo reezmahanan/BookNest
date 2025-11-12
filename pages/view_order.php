@@ -48,10 +48,17 @@ include __DIR__ . '/../includes/navbar.php';
                             'Cancelled' => 'bg-danger',
                             default => 'bg-secondary'
                         };
+                        
+                        // Check if image_url is a full URL or local path
+                        if (filter_var($row['image_url'], FILTER_VALIDATE_URL)) {
+                            $imgSrc = $row['image_url'];
+                        } else {
+                            $imgSrc = "/bookshop/assets/images/" . htmlspecialchars($row['image_url']);
+                        }
                     ?>
                     <div class="list-group-item py-3">
                         <div class="d-flex">
-                            <img src="/bookshop/assets/images/<?= htmlspecialchars($row['image_url']) ?>" alt="<?= htmlspecialchars($row['title']) ?>" class="rounded shadow-sm me-3" style="width:80px;height:110px;object-fit:cover;" />
+                            <img src="<?= $imgSrc ?>" alt="<?= htmlspecialchars($row['title']) ?>" class="rounded shadow-sm me-3" style="width:80px;height:110px;object-fit:cover;" onerror="this.src='/bookshop/assets/images/no-image.jpg'" />
                             <div class="flex-grow-1">
                                 <h5 class="mb-1"><?= htmlspecialchars($row['title']) ?></h5>
                                 <p class="mb-1 small text-muted">By <?= htmlspecialchars($row['author']) ?></p>
