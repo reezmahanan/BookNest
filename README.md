@@ -212,10 +212,10 @@ This project covers:
 ## Team Members
 
 This project was developed by:
-- M. Reezma Hanan
-- AJ. Raaef[AJRaaef](https://github.com/AJRaaef)
-- NM. Mahuroos[Mahroos03](https://github.com/Mahroos03)
-- NM. Asrar
+- [M.Reezma Hanan](https://github.com/reezmahanan)
+- [AJ.Raaef](https://github.com/AJRaaef)
+- [NM.MahUroos](https://github.com/Mahroos03)
+- [NM.Asrar](https://github.com/asrarDev-tech)
 
 ## Need Help?
 
