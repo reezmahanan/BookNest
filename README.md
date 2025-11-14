@@ -214,7 +214,7 @@ This project covers:
 This project was developed by:
 - M. Reezma Hanan
 - AJ. Raaef
-- NM. Mahuroos
+- NM. Mahuroos[repo](https://github.com/Mahroos03)
 - NM. Asrar
 
 ## Need Help?
