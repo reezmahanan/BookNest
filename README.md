@@ -213,8 +213,8 @@ This project covers:
 
 This project was developed by:
 - M. Reezma Hanan
-- AJ. Raaef
-- NM. Mahuroos[repo](https://github.com/Mahroos03)
+- AJ. Raaef[AJRaaef](https://github.com/AJRaaef)
+- NM. Mahuroos[Mahroos03](https://github.com/Mahroos03)
 - NM. Asrar
 
 ## Need Help?
