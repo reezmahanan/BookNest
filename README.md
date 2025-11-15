@@ -53,7 +53,7 @@ This is a web development project for learning PHP, MySQL, and web design.
 [[Home Page](https://github.com/reezmahanan/BookNest/blob/main/Booknest%20screenshots/Home%20page.png)]
 [[Login Page](https://github.com/reezmahanan/BookNest/blob/main/Booknest%20screenshots/login%20page.png)]
 [[Register Page](https://github.com/reezmahanan/BookNest/blob/main/Booknest%20screenshots/create%20account%20page.png)]
-[[Register Page](https://github.com/reezmahanan/BookNest/blob/main/Booknest%20screenshots/admin%20dashboard.png)
+[[Admin Dashboard](https://github.com/reezmahanan/BookNest/blob/main/Booknest%20screenshots/admin%20dashboard.png)]
 ## Requirements
 
 - XAMPP (with Apache and MySQL)
