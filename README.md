@@ -48,6 +48,10 @@ This is a web development project for learning PHP, MySQL, and web design.
 - **Icons:** Bootstrap Icons
 - **Fonts:** Google Fonts (Inter)
 
+
+##  Screenshots
+[Home Page]()
+
 ## Requirements
 
 - XAMPP (with Apache and MySQL)
