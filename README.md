@@ -50,7 +50,9 @@ This is a web development project for learning PHP, MySQL, and web design.
 
 
 ##  Screenshots
-[Home Page]()
+[Home Page](https://github.com/reezmahanan/BookNest/blob/main/Booknest%20screenshots/Home%20page.png)]
+[Login Page](https://github.com/reezmahanan/BookNest/blob/main/Booknest%20screenshots/Home%20page.png)]
+[Rgister Page](https://github.com/reezmahanan/BookNest/blob/main/Booknest%20screenshots/Home%20page.png)]
 
 ## Requirements
 
