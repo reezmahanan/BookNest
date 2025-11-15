@@ -2,6 +2,8 @@
 session_start();
 include('../config/db.php');
 
+
+
 // ✅ Check login
 if (!isset($_SESSION['user_id'])) {
     header("Location: login_user.php?error=Please login to view your cart");
@@ -30,15 +32,6 @@ $total = 0;
             background-color: #f6f6f6;
             margin: 0;
             padding: 0;
-        }
-
-        .container {
-            width: 90%;
-            margin: 30px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         h2 {
