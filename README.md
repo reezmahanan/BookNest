@@ -1,4 +1,4 @@
-i # BookNest - Online Bookstore
+## BookNest - Online Bookstore
 
 A complete online bookstore website built with PHP and MySQL.
 
